@@ -2,7 +2,6 @@ package com.nlwexpert.certification_nlw.seed;
 
 import java.io.IOException;
 import java.nio.file.Files;
-import java.nio.file.Path;
 import java.nio.file.Paths;
 
 import javax.sql.DataSource;
@@ -13,6 +12,7 @@ import org.springframework.jdbc.datasource.DriverManagerDataSource;
 public class CreateSeed {
     private final JdbcTemplate jdbcTemplate;
 
+    @SuppressWarnings("null")
     public CreateSeed(DataSource dataSource){
         this.jdbcTemplate = new JdbcTemplate(dataSource);
     }
