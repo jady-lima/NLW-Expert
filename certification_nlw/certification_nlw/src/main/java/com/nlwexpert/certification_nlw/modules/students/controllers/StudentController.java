@@ -7,14 +7,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.nlwexpert.certification_nlw.modules.students.dto.VerifyHasCertificationDTO;
-import com.nlwexpert.certification_nlw.modules.students.useCases.verifyIfHasCertificationUseCase;
+import com.nlwexpert.certification_nlw.modules.students.useCases.VerifyIfHasCertificationUseCase;
 
 @RestController
 @RequestMapping("/students")
 public class StudentController {
 
     @Autowired
-    private verifyIfHasCertificationUseCase verifyIfHasCertificationUseCase;
+    private VerifyIfHasCertificationUseCase verifyIfHasCertificationUseCase;
     
     @PostMapping("/verifyIfHasCertification")
     public String verifyIfHasCertification(@RequestBody VerifyHasCertificationDTO verifyHasCertificationDTO) {
